@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+/**
+ * 33. Напишите программу на Java и вычислите сумму цифр целого числа.
+ */
+public class сложениеЦифрЧисла {
+
+    public static void main(String[] args) {
+        Scanner console = new Scanner(System.in);
+        System.out.println("Введите целое число");
+        int x=console.nextInt();
+        System.out.println("Сумма цифр = "+reshenie(x));
+
+    }
+    private static int reshenie(int x)
+    {
+        if (x<10)
+            return x;
+        else if (x<100)
+        {
+            int i=(x/10);
+            int y=(x%10);
+            int q=i+y;
+            return q;
+        }
+        else
+        {
+            int i=((x%100)%10);
+            int y=(x%10);
+            int q=(x/100);
+            int w=q+y+i;
+            return w;
+        }
+
+    }
+
+}
